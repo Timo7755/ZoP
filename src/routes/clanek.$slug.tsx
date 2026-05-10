@@ -2,8 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { ScrollReveal } from "../components/ScrollReveal";
-
-const DRUPAL_BASE = "http://zop-web-blog.ddev.site";
+import { DRUPAL_BASE } from "#/config";
 
 interface DrupalIncluded {
   id: string;
@@ -322,7 +321,7 @@ function ClanekPage() {
               dangerouslySetInnerHTML={{
                 __html: article.attributes.field_telo[0].processed.replace(
                   /src="\/sites\//g,
-                  `src="http://zop-web-blog.ddev.site/sites/`,
+                  `src="${DRUPAL_BASE}/sites/`,
                 ),
               }}
             />

@@ -2,8 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { ScrollReveal } from "../components/ScrollReveal";
-
-const DRUPAL_BASE = "http://zop-web-blog.ddev.site";
+import { DRUPAL_BASE } from "#/config";
 
 interface DrupalIncluded {
   id: string;

@@ -8,13 +8,11 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
+    "start": "node dist/server/server.js",
     "preview": "npm run build && vite preview",
-    "test": "vitest run",
-    "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "test": "vitest run"
   },
   "dependencies": {
-    "@cloudflare/vite-plugin": "^1.13.8",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "^0.7.0",
@@ -40,7 +38,6 @@
     "typescript": "^5.7.2",
     "vite": "^7.1.7",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.5",
-    "wrangler": "^4.80.0"
+    "vitest": "^3.0.5"
   }
 }
